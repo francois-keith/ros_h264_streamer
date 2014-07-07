@@ -1,0 +1,19 @@
+language: cpp
+compiler: gcc
+env:
+  global:
+  - APT_DEPENDENCIES="doxygen doxygen-latex 
+      libavcodec-dev libswscale-dev libx264-dev 
+      ros-hydro-roscpp ros-hydro-image-transport ros-hydro-cv-bridge"
+  - GIT_DEPENDENCIES=""
+notifications:
+  email:
+  - francois.keith@gmail.com
+branches:
+  only:
+  - master
+script: ./.travis/run build
+after_success: ./.travis/run after_success
+after_failure: ./.travis/run after_failure
+before_install: ./.travis/run dependencies/catkin; ./.travis/run before_install
+
