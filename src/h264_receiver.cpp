@@ -37,7 +37,7 @@ struct H264ReceiverNetImpl
   #else
   H264ReceiverNetImpl(H264Receiver::Config & conf)
   #endif
-  : io_service(), io_service_th(0), stop_io_service(false), request_data(0), protocol(ChunkIDPlusData), video_chunk_size(0), chunk_data(0),
+  : io_service(), io_service_th(0), stop_io_service(false), request_data(0), chunk_data(0), protocol(ChunkIDPlusData), video_chunk_size(0),
     frame_data_size(0), full_frame_data_size(0), frame_data(0),
     has_new_data(false), img(new sensor_msgs::Image),
     decoder(conf.width, conf.height)
