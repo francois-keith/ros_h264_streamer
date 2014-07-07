@@ -23,7 +23,6 @@ if(catkin_FOUND)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  DEPENDS roscpp image_transport
 )
 endif()
 
